@@ -14,7 +14,6 @@ public class FirstController : MonoBehaviour, SceneController, UserAction {
 	public CoastController toCoast;
 	public BoatController boat;
 	private MyCharacterController[] characters;
-    public PADSceneActionManager actionManager; //添加动作管理类
 
     void Awake() {
 		Director director = Director.getInstance ();
@@ -142,41 +141,4 @@ public class FirstController : MonoBehaviour, SceneController, UserAction {
 			characters [i].reset ();
 		}
 	}
-}
-
-/*本次游戏场景中动作管理类*/
-public class PADSceneActionManager : SSActionManager
-{
-    public FirstController sceneController;
-
-    private SequenceAction boatMove;
-    private SequenceAction roleMove;
-
-    protected void Start()
-    {
-        sceneController = (FirstController)SSDirector.GetInstance().CurrentScenceController;
-        sceneController.actionManager = this;
-    }
-
-    protected new void Update()
-    {
-        base.Update();
-    }
-
-    public void moveBoat(GameObject boat, Vector3 endPos, float speed)
-    {
-        SSAction action1 = SSMoveToAction.GetSSAction(endPos, speed);
-        boatMove = SequenceAction.GetSSAcition(0, 0, new List<SSAction> { action1 });
-        this.RunAction(boat, boatMove, this);
-    }
-
-    public void moveRole(GameObject role, Vector3 middlePos, Vector3 endPos, float speed)
-    {
-        //两段移动
-        SSAction action1 = SSMoveToAction.GetSSAction(middlePos, speed);
-        SSAction action2 = SSMoveToAction.GetSSAction(endPos, speed);
-        //repeat=1，start=0，两个动作
-        roleMove = SequenceAction.GetSSAcition(1, 0, new List<SSAction> { action1, action2 });
-        this.RunAction(role, roleMove, this);
-    }
 }

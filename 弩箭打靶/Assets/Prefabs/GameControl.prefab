@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7370839315164479059
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 289936831822506134}
+  - component: {fileID: 1815151110868937986}
+  m_Layer: 0
+  m_Name: GameControl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &289936831822506134
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7370839315164479059}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.02411107, z: -0, w: 0.9997093}
+  m_LocalPosition: {x: -0.0020935535, y: -1.9140003, z: -3.229984}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1815151110868937986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7370839315164479059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4ec58663404b3c4a885b11c844d1989, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fire_permisssion: 0
+  arrow_num: 10
+  arrow: {fileID: 5236339035361528064, guid: 23953965734146d4aa4d05d734259697, type: 3}
+  animator: {fileID: 0}
+  arrowPoint: {fileID: 0}
+  bow_tem: {fileID: 0}
+  bow: {fileID: 0}
+  bow_ro: {fileID: 0}
+  bow_rato: 0.1
+  ro_rato: 0.1
+  hold_power: 0
+  hold_curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 5
+      inSlope: 13.616458
+      outSlope: 13.616458
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.7004398
+      value: 14.537509
+      inSlope: 8.87422
+      outSlope: 8.87422
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.7420502
+      value: 18.841425
+      inSlope: 2.5264926
+      outSlope: 2.5264926
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 3
+      value: 20
+      inSlope: 0.92100257
+      outSlope: 0.92100257
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  mouse_position: {x: 0, y: 0, z: 0}
